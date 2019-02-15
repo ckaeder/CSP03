@@ -26,6 +26,11 @@
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 import java.util.*;
 
+
+/**
+ * Subscriber models a subscriber on the Library app. Initializing essential variables and outlining
+ * various actions that can or cannot be taken.
+ */
 public class Subscriber {
   // static fields
   private final static int MAX_BOOKS_CHECKED_OUT = 10; // maximum number of books to be checked out
@@ -47,6 +52,9 @@ public class Subscriber {
                                            // books
   private ArrayList<Book> booksReturned; // list of the books returned by this subscriber
 
+  /**
+   * Initializes a Subscriber with no information in parameters
+   */
   public Subscriber() {
     this.CARD_BAR_CODE = nextCardBarCode; //set next barcode
     nextCardBarCode++; //increment barcode
@@ -54,6 +62,13 @@ public class Subscriber {
     this.booksReturned = new ArrayList<Book>(1);
   }
 
+  /**
+   * Initializes a Subscriber with given information
+   * @param name
+   * @param address
+   * @param phoneNumber
+   * @param pin
+   */
   public Subscriber(String name, String address, String phoneNumber, int pin) {
     this(); //call unparameterized constructor to set variable basics
     this.name = name; //reassign variables to parameters

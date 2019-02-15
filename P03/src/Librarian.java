@@ -26,23 +26,41 @@
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 import java.util.*;
 
+/**
+ * Librarian models a Librarian on the Library app. Initializing essential variables and outlining
+ * various actions that can or cannot be taken.
+ */
 public class Librarian {
   // instance fields
   private String username; // librarian's username
   private String password; // librarian password to have access to this application
 
-  public Librarian() {
-
-  }
-
-  public Librarian(String username, String password) {
+  /*
+   * Librarian constructor creates a Librarian with assigned name and password
+   */
+  public Librarian(String username, String password) { // set username and password
     this.username = username;
     this.password = password;
   }
 
+  /**
+   * checkPassword determines if input is the equivalence of the password assigned at construction
+   * @param password input from driver class
+   * @return key true if password matches input, false otherwise
+   */
   public boolean checkPassword(String password) {
     boolean key = false;
+    if (this.password.equals(password)) { // check that input equals password
+      key = true;
+    }
     return key;
+  }
+  /**
+   * Getter method for username
+   * @return username of the librarian requested
+   */
+  public String getUsername() {
+    return username;
   }
 
 }

@@ -27,7 +27,7 @@
 import java.util.*;
 
 /**
- * Book initializes an object book and gives it identifying information
+ * Book initializes an object book and gives it identifying information and actions
  * @author cecelia
  */
 public class Book {
