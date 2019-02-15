@@ -24,11 +24,11 @@
 // Online Sources: (identify each URL and describe their assistance in detail)
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
-import java.util.*;
 
 /**
  * Book initializes an object book and gives it identifying information and actions
- * @author cecelia
+ * @author Cecelia
+ * @author Ryann
  */
 public class Book {
   // class/static fields

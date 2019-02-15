@@ -24,10 +24,11 @@
 // Online Sources: (identify each URL and describe their assistance in detail)
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
-import java.util.*;
 
 /**
- * test that all the constructors in the book class are functioning correctly
+ * Test that all the constructors in the book class are functioning correctly
+ * @author Cecelia
+ * @author Ryann
  */
 public class BookLibraryTests {
   public static boolean testBookConstructorGetters() {

@@ -30,6 +30,8 @@ import java.util.*;
 /**
  * Subscriber models a subscriber on the Library app. Initializing essential variables and outlining
  * various actions that can or cannot be taken.
+ * @author Cecelia
+ * @author Ryann
  */
 public class Subscriber {
   // static fields

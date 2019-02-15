@@ -24,11 +24,12 @@
 // Online Sources: (identify each URL and describe their assistance in detail)
 //
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
-import java.util.*;
 
 /**
  * Librarian models a Librarian on the Library app. Initializing essential variables and outlining
  * various actions that can or cannot be taken.
+ * @author Cecelia
+ * @author Ryann
  */
 public class Librarian {
   // instance fields
