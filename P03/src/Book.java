@@ -121,6 +121,21 @@ public class Book {
   }
 
   /**
+   * Getter method for borrower barcode
+   * @return borrowerBarCode
+   */
+  public Integer getBorrowerCardBarCode(){
+    Integer barcode = null;
+    if(isAvailable()) {
+      System.out.println("WARNING: This book is available.");
+    }
+    else {
+      barcode = borrowerCardBarCode;
+    }
+    return barcode;
+  }
+  
+  /**
    * returnBook sets the variable borrowerBarCode to null and therefore availability to true
    */
   public void returnBook() {
