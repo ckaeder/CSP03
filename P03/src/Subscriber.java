@@ -73,7 +73,7 @@ public class Subscriber {
    * @param phoneNumber
    * @param pin
    */
-  public Subscriber(String name, String address, String phoneNumber, int pin) {
+  public Subscriber(String name, int pin, String address, String phoneNumber) {
     this(); //call unparameterized constructor to set variable basics
     this.name = name; //reassign variables to parameters
     this.address = address;

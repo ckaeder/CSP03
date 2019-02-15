@@ -32,7 +32,7 @@
  * @author Ryann
  */
 public class BookLibraryTests {
-  
+
   /**
    * Test the getters of the Book constructor
    * 
@@ -158,7 +158,7 @@ public class BookLibraryTests {
   public static boolean testSubGetterSetter() {
     boolean testPassed = true;
     Subscriber person3 =
-        new Subscriber("Romeo Montague", "1 Montague Estate Verona, Italy", "0123456789", 1122);
+        new Subscriber("Romeo Montague", 1122, "1 Montague Estate Verona, Italy", "0123456789");
     if (!person3.getAddress().equals("1 Montague Estate Verona, Italy")) {
       System.out.println("WARNING: person3's address not initialized correctly.");
       testPassed = false;
@@ -191,7 +191,7 @@ public class BookLibraryTests {
     }
     return testPassed;
   }
-  
+
   /**
    * test the Librarian methods
    * 
@@ -199,19 +199,37 @@ public class BookLibraryTests {
    */
   public static boolean testLibrarian() {
     boolean testPassed = true;
-    Librarian libr1 = new Librarian("Jekyll","Hyde");
-    if(!libr1.getUsername().equals("Jekyll")) {
+    Librarian libr1 = new Librarian("Jekyll", "Hyde");
+    if (!libr1.getUsername().equals("Jekyll")) {
       System.out.println("WARNING: libr1's username was initialized incorrectly.");
       testPassed = false;
     }
-    if(!libr1.checkPassword("Hyde")) {
+    if (!libr1.checkPassword("Hyde")) {
       System.out.println("WARNING: libr1's password was initialized incorrectly.");
       testPassed = false;
     }
-    if(libr1.checkPassword("password")) {
+    if (libr1.checkPassword("password")) {
       System.out.println("WARNING: password was incorrectly identified.");
       testPassed = false;
     }
+    return testPassed;
+  }
+
+  /**
+   * test search by author
+   * 
+   * @return testPassed true if all tests passed, false otherwise
+   */
+  public static boolean testLibraryFindBookByAuthor() {
+    boolean testPassed = true;
+    Library library = new Library("Park Street", "username", "password");
+    library.addBook("abc", "xyz");
+
+    if (library.findBookByAuthor("xyz").size() != 1) {
+      System.out.println("WARNING: findBookByAuthor should have returned 1");
+      testPassed = false;
+    }
+
     return testPassed;
   }
 
@@ -223,5 +241,6 @@ public class BookLibraryTests {
     testReturnBook();
     testSubGetterSetter();
     testLibrarian();
+    testLibraryFindBookByAuthor();
   }
 }
