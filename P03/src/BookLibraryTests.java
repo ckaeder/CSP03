@@ -27,10 +27,17 @@
 
 /**
  * Test that all the constructors in the book class are functioning correctly
+ * 
  * @author Cecelia
  * @author Ryann
  */
 public class BookLibraryTests {
+  
+  /**
+   * Test the getters of the Book constructor
+   * 
+   * @return testPassed true if all tests passed, false otherwise
+   */
   public static boolean testBookConstructorGetters() {
     boolean testPassed = true;
     Book Book1 = new Book("Ender's Game", "Orson Scott Card");
@@ -72,6 +79,8 @@ public class BookLibraryTests {
 
   /**
    * test that returning a book resets the borrowerBarCode to null
+   * 
+   * @return testPassed true if all tests passed, false otherwise
    */
   public static boolean testBookReturnBook() {
     boolean testPassed = true;
@@ -90,7 +99,9 @@ public class BookLibraryTests {
   }
 
   /**
-   * test that checking out a book functions correctly (adding to
+   * test that checking out a book functions correctly (adding to list and warnings, availability)
+   * 
+   * @return testPassed true if all tests passed, false otherwise
    */
   public static boolean testSubscriberCheckoutBook() {
     boolean testPassed = true;
@@ -111,7 +122,11 @@ public class BookLibraryTests {
     return testPassed;
   }
 
-
+  /**
+   * Test returnBook method (add to history, remove from checked out, remove barcode from Book)
+   * 
+   * @return testPassed true if all tests passed, false otherwise
+   */
   public static boolean testReturnBook() {
     boolean testPassed = true;
     Subscriber person2 = new Subscriber();
@@ -135,7 +150,12 @@ public class BookLibraryTests {
     return testPassed;
   }
 
-  public static boolean testGetterSetter() {
+  /**
+   * Test the getters and setter methods for Subscriber
+   * 
+   * @return testPassed true if all tests passed, false otherwise
+   */
+  public static boolean testSubGetterSetter() {
     boolean testPassed = true;
     Subscriber person3 =
         new Subscriber("Romeo Montague", "1 Montague Estate Verona, Italy", "0123456789", 1122);
@@ -172,6 +192,11 @@ public class BookLibraryTests {
     return testPassed;
   }
   
+  /**
+   * test the Librarian methods
+   * 
+   * @return testPassed true if all tests passed, false otherwise
+   */
   public static boolean testLibrarian() {
     boolean testPassed = true;
     Librarian libr1 = new Librarian("Jekyll","Hyde");
@@ -196,7 +221,7 @@ public class BookLibraryTests {
     testBookReturnBook();
     testSubscriberCheckoutBook();
     testReturnBook();
-    testGetterSetter();
+    testSubGetterSetter();
     testLibrarian();
   }
 }

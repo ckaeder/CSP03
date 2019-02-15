@@ -29,6 +29,7 @@ import java.util.*;
 /**
  * Library is an app that models a Library, its resources and functions. Allowing for adding books,
  * subscribers and librarians.
+ * 
  * @author Cecelia
  * @author Ryann
  */
@@ -40,8 +41,11 @@ public class Library {
   private ArrayList<Book> books; // list of the books in this library
   private ArrayList<Subscriber> subscribers; // list of this library's subscribers
 
-  public Library() {
-
+  public Library(String address, String librarianUsername, String librarianLogin) {
+    this.address = address;
+    this.librarian = new Librarian(librarianUsername, librarianLogin);
+    this.books = new ArrayList<Book>(1);
+    this.subscribers = new ArrayList<Subscriber>(1);
   }
 
   /**
@@ -57,5 +61,71 @@ public class Library {
       System.out.print("<Author>: " + books.get(i).getAuthor() + " ");
       System.out.println("<Is Available>: " + books.get(i).isAvailable());
     }
+  }
+
+  /**
+   * Displays a list of books
+   * 
+   * @param books ArrayList of books
+   */
+  public void addBook(String title, String author) {
+
+  }
+
+
+  public void addSubscriber(String name, int pin, String address, String phoneNumber) {
+
+  }
+
+
+  public Book findBook(Book books) {
+    return books;
+  }
+
+
+  public ArrayList<Book> findBookByAuthor(String Author){
+    ArrayList booksByAuthor = new ArrayList<Book>(1);
+    return booksByAuthor;
+  }
+
+
+  public ArrayList<Book> findBookByTitle(String title){
+    ArrayList booksByTitle = new ArrayList<Book>(1);
+    return booksByTitle;
+  }
+  
+  
+  public Subscriber findSubscriber(int cardBarCode) {
+    //return Subscriber
+  }
+  
+  
+  public String getAddress() {
+    return address;
+  }
+  
+  
+  public Librarian getLibrarian() {
+    return librarian;
+  }
+  
+  
+  public static void main(String args[]) {
+    
+  }
+  
+  
+  public void readProcessLibrarianCommand(Scanner kbr) {
+    
+  }
+  
+  
+  public void readProcessUserCommand(Scanner kbr) {
+    
+  }
+  
+  
+  public Book removeBook(int bookId){
+    //return Book
   }
 }

@@ -28,6 +28,7 @@
 /**
  * Librarian models a Librarian on the Library app. Initializing essential variables and outlining
  * various actions that can or cannot be taken.
+ * 
  * @author Cecelia
  * @author Ryann
  */
@@ -46,6 +47,7 @@ public class Librarian {
 
   /**
    * checkPassword determines if input is the equivalence of the password assigned at construction
+   * 
    * @param password input from driver class
    * @return key true if password matches input, false otherwise
    */
@@ -58,6 +60,7 @@ public class Librarian {
   }
   /**
    * Getter method for username
+   * 
    * @return username of the librarian requested
    */
   public String getUsername() {

@@ -30,6 +30,7 @@ import java.util.*;
 /**
  * Subscriber models a subscriber on the Library app. Initializing essential variables and outlining
  * various actions that can or cannot be taken.
+ * 
  * @author Cecelia
  * @author Ryann
  */
@@ -66,6 +67,7 @@ public class Subscriber {
 
   /**
    * Initializes a Subscriber with given information
+   * 
    * @param name
    * @param address
    * @param phoneNumber
@@ -81,6 +83,7 @@ public class Subscriber {
 
   /**
    * accessor method for bar code
+   * 
    * @return CARD_BAR_CODE 
    */
   public Integer getCARD_BAR_CODE() {
@@ -89,6 +92,7 @@ public class Subscriber {
 
   /**
    * accessor method for address
+   * 
    * @return address 
    */
   public String getAddress() {
@@ -97,6 +101,7 @@ public class Subscriber {
   
   /**
    * accessor method for name
+   * 
    * @return name
    */
   public String getName() {
@@ -105,6 +110,7 @@ public class Subscriber {
   
   /**
    * accessor method for phone number
+   * 
    * @return phoneNumber
    */
   public String getPhoneNumber() {
@@ -113,6 +119,7 @@ public class Subscriber {
   
   /**
    * accessor method for pin
+   * 
    * @return pin
    */
   public int getPin() {
@@ -121,6 +128,7 @@ public class Subscriber {
   
   /**
    * setter method for address
+   * 
    * @param newAddress
    */
   public void setAddress(String newAddress) {
@@ -129,6 +137,7 @@ public class Subscriber {
   
   /**
    * setter method for phone number
+   * 
    * @param newPhoneNumber
    */
   public void setPhoneNumber(String newPhoneNumber) {
@@ -200,6 +209,7 @@ public class Subscriber {
   /**
    * Determine if checking out book is possible (under max size, not already checked out, book is 
    * available). If possible, check book out (set not available and add to booksCheckedOut list).
+   * 
    * @param book
    */
   public void checkoutBook(Book book) {
@@ -222,6 +232,7 @@ public class Subscriber {
   /**
    * Determine if returning book is possible (checked out by this person). If possible, return book
    * (set available, remove from booksCheckedOut list, and add to booksReturned list).
+   * 
    * @param book
    */
   public void returnBook(Book book) {

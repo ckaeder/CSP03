@@ -27,6 +27,7 @@
 
 /**
  * Book initializes an object book and gives it identifying information and actions
+ * 
  * @author Cecelia
  * @author Ryann
  */
@@ -57,6 +58,7 @@ public class Book {
   /**
    * Book(title, author) constructs a book and initializes id to next id 
    * Title and author are initialized to that of the parameters
+   * 
    * @param title of the book
    * @param author of the book
    */
@@ -71,6 +73,7 @@ public class Book {
   /**
    * borrowBook changes the borrowerBarCode from null to the identifier of a subscriber's account
    * to show that the book is no longer available
+   * 
    * @param borrowerCardBarCode identifies borrower from library database 
    */
   public void borrowBook(Integer borrowerCardBarCode) {
@@ -79,6 +82,7 @@ public class Book {
 
   /**
    * getAuthor returns the name of the author of the book
+   * 
    * @return author of the book
    */
   public String getAuthor() {
@@ -87,6 +91,7 @@ public class Book {
 
   /**
    * getID returns the unique id of the book
+   * 
    * @return id of the book
    */
   public int getID() {
@@ -95,6 +100,7 @@ public class Book {
 
   /**
    * getTitle returns the title of the book / accessor method
+   * 
    * @return title of the book
    */
   public String getTitle() {
@@ -103,6 +109,7 @@ public class Book {
 
   /**
    * isAvailable returns the status of availability of the book, dependent on borrowerBarCode
+   * 
    * @return available the availability of the book
    */
   public boolean isAvailable() {
