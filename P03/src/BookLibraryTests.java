@@ -171,6 +171,24 @@ public class BookLibraryTests {
     }
     return testPassed;
   }
+  
+  public static boolean testLibrarian() {
+    boolean testPassed = true;
+    Librarian libr1 = new Librarian("Jekyll","Hyde");
+    if(!libr1.getUsername().equals("Jekyll")) {
+      System.out.println("WARNING: libr1's username was initialized incorrectly.");
+      testPassed = false;
+    }
+    if(!libr1.checkPassword("Hyde")) {
+      System.out.println("WARNING: libr1's password was initialized incorrectly.");
+      testPassed = false;
+    }
+    if(libr1.checkPassword("password")) {
+      System.out.println("WARNING: password was incorrectly identified.");
+      testPassed = false;
+    }
+    return testPassed;
+  }
 
   // driver class for tests
   public static void main(String args[]) {
@@ -179,5 +197,6 @@ public class BookLibraryTests {
     testSubscriberCheckoutBook();
     testReturnBook();
     testGetterSetter();
+    testLibrarian();
   }
 }

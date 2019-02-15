@@ -26,6 +26,12 @@
 /////////////////////////////// 80 COLUMNS WIDE ///////////////////////////////
 import java.util.*;
 
+/**
+ * Library is an app that models a Library, its resources and functions. Allowing for adding books,
+ * subscribers and librarians.
+ * @author Cecelia
+ * @author Ryann
+ */
 public class Library {
   // instance fields
   private String address; // Street address of this library

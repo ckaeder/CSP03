@@ -207,7 +207,7 @@ public class Subscriber {
     System.out.println("Checkout Failed: You cannot check out more than "
         + MAX_BOOKS_CHECKED_OUT + " books.");
     }
-    else if(booksCheckedOut!=null && booksCheckedOut.contains(book)) { //warning when checked out
+    else if(booksCheckedOut.contains(book)) { //warning when checked out
     System.out.println("You have already checked out " + book.getTitle() + " book");// by you
     }
     else if(!book.isAvailable()) {
